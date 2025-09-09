@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this theme in your work, please cite it as below."
+type: software
+title: "UC Chile Beamer Theme"
+version: "v1.0.0"
+authors:
+  - family-names: "Carrasco"
+    given-names: "Rodrigo A."
+    affiliation: "Pontificia Universidad Católica de Chile (PUC); Institute of Mathematical Engineering and Computation; Department of Industrial and Systems Engineering; UC Data Science Initiative"
+repository-code: "https://github.com/drRax/UCChile-Beamer-Template"
+url: "https://github.com/drRax/UCChile-Beamer-Template"
+license: "Apache-2.0"
+abstract: "A Beamer theme/template aligned with UC Chile colors, with opinionated defaults, example slides, and latexmk integration."
+keywords:
+  - "beamer"
+  - "latex"
+  - "presentation"
+  - "theme"
+  - "uc-chile"
+date-released: 2025-09-09
+preferred-citation:
+  type: software
+  title: "UC Chile Beamer Theme"
+  version: "v1.0.0"
+  authors:
+    - family-names: "Carrasco"
+      given-names: "Rodrigo A."
+      affiliation: "Pontificia Universidad Católica de Chile (PUC)"
+  url: "https://github.com/drRax/UCChile-Beamer-Template"

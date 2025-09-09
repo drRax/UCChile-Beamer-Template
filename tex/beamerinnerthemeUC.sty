@@ -1,0 +1,23 @@
+% UC Beamer Theme - rax 22.08.09
+% Copyright Rodrigo A. Carrasco - rax <www.raxlab.science>
+
+% capture shadow option
+\DeclareOptionBeamer{shadow}[true]{\def\beamer@themerectangles@shadow{#1}}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+% base inner theme
+\useinnertheme{rectangles}
+
+% item markers
+\setbeamertemplate{items}[triangle]
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[default]
+
+% section markers
+\setbeamertemplate{sections/subsections in toc}[square]
+
+% block styles
+\setbeamertemplate{blocks}[rectangles] %[shadow = \beamer@themerectangles@shadow]
+
+\mode<all>

@@ -1,0 +1,86 @@
+% Style and Definitions for Beamer - rax 05.11.13
+% Copyright Rodrigo A. Carrasco - rax <www.rax.cl>
+
+% ******************************************************************
+% **** packages ****
+% symbols and graphics
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{dsfont}
+\usepackage{wasysym}
+\usepackage{makeidx}
+
+% styles
+\usepackage{setspace}
+\usepackage{psfrag}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{subfig}
+
+% other
+\usepackage{xifthen}
+
+% ******************************************************************
+% **** build definition and text ****
+\usepackage{datetime}
+\usepackage[overlay,absolute]{textpos}
+
+% **** build control ****
+% create 2-digit year
+\newcounter{buildyear}
+\setcounter{buildyear}{\the\year}
+\addtocounter{buildyear}{-2000}
+\newcommand{\tdyear}{\arabic{buildyear}}
+% create new time format
+\newtimeformat{vtime}{\twodigit{\THEHOUR}\twodigit{\THEMINUTE}\twodigit{\THESECOND}}
+\settimeformat{vtime}
+% build macro
+\newcommand{\build}{\tdyear\twodigit{\the\month}\twodigit{\the\day}\currenttime}
+% add build code
+\newcommand{\addbuild}{
+	\ifthenelse{\equal{\showver}{1}}
+	{
+	\begin{textblock*}{1in}[1,1](26mm,94mm)
+		\rotatebox{90}{\tiny {\color{gray!50!white} v.\ver~(b.\build)}}
+	\end{textblock*}
+	}
+}
+
+% ******************************************************************
+% **** format for contact box ****
+% twitter handle
+\definecolor{twitterblue}{RGB}{64,153,255}
+\newcommand{\twitter}[1]{\href{https://twitter.com/#1}{\textcolor{twitterblue}{\faIcon{twitter}: #1}}}
+% instagram handle
+\definecolor{instagramred}{RGB}{221,42,123}
+\newcommand{\instagram}[1]{\href{https://www.instagram.com/#1}{\textcolor{instagramred}{\faIcon{instagram}: #1}}}
+% email handle
+\newcommand{\email}[1]{\href{mailto:#1}{\textcolor{ucblue}{\faIcon{envelope}: #1}}}
+% webpage handle
+\newcommand{\webpage}[1]{\href{https://#1}{\textcolor{ucblue}{\faIcon{globe}: #1}}}
+
+% ******************************************************************
+% **** other stuff ****
+\DeclareGraphicsExtensions{.jpg,.eps,.png,.pdf,.mps,.gif}
+
+% function to capture last real frame
+\newcommand{\lastrealframe}
+{
+\makeatletter
+\immediate\write\@mainaux{\string\gdef\string\inserttotalframenumbernew{\insertframenumber}}
+\makeatother
+}
+
+% caption text
+\newcommand{\captext}[2]{
+	\begin{minipage}{#1}
+		{\fontsize{3}{3} \selectfont \hfill \copyright~#2}
+	\end{minipage}
+}
+
+% small size
+\def\micro{\fontsize{.1pt}{.1pt}\selectfont}

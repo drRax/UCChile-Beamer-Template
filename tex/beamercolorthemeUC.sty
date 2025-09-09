@@ -1,0 +1,85 @@
+% UC Beamer Theme - rax 22.08.09
+% Copyright Rodrigo A. Carrasco - rax <www.raxlab.science>
+
+\mode<presentation>
+
+% ***** Colour Definitions *****
+\definecolor{uclightblue}{RGB}{1, 118, 222}
+\definecolor{ucblue}{RGB}{23, 63, 138}
+\definecolor{ucdarkblue}{RGB}{3, 18, 46}
+\definecolor{ucyellow}{RGB}{254, 198, 13}
+
+\colorlet{darkred}{red!85!black}
+\colorlet{darkgray}{gray!70!black}
+
+\colorlet{block}{uclightblue}
+\colorlet{example}{ucblue} %{Green!85!black}
+\colorlet{alert}{DarkRed!85!black}%{red!85!black}
+
+% ***** Set Colours *****
+% general colour scheme
+\setbeamercolor{structure}{fg = uclightblue}
+\setbeamercolor{palette primary}{fg = white, bg = uclightblue}
+\setbeamercolor{palette secondary}{fg = white, bg = ucblue}
+\setbeamercolor{palette tertiary}{fg = white, bg = darkgray}
+\setbeamercolor{palette quaternary}{fg = white, bg = black}
+
+%\setbeamercolor*{sidebar}{parent=palette primary}
+%\setbeamercolor*{palette sidebar primary}{fg=slidetitlebarcolor}
+%\setbeamercolor*{palette sidebar secondary}{fg=red}
+%\setbeamercolor*{palette sidebar tertiary}{fg=slidetitlebarcolor}
+%\setbeamercolor*{palette sidebar quaternary}{fg=red}
+
+% ***** Title Slide *****
+% presentation title page
+\setbeamercolor{title}{parent = palette primary}
+\setbeamercolor{subtitle}{parent = palette primary}
+\setbeamercolor{author}{fg = black}
+\setbeamercolor{date}{fg = darkgray}
+\setbeamercolor{institute}{fg = darkgray}
+
+\setbeamercolor{logo bar}{fg = white, bg = ucblue}
+\setbeamercolor{accent bar}{fg = black, bg = ucyellow}
+
+% ***** Outline Slide *****
+\setbeamercolor{section in toc}{fg = uclightblue}
+\setbeamercolor{subsection in toc}{fg = uclightblue}
+\setbeamercolor{section in toc shaded}{fg = uclightblue}
+
+% ***** Regular Slide *****
+% frame title
+\setbeamercolor{frametitle}{parent = palette primary}
+\setbeamercolor{framesubtitle}{parent = palette primary}
+% text
+\setbeamercolor{normal text}{fg = black}
+% items
+\setbeamercolor{item}{fg = uclightblue}
+\setbeamercolor{subitem}{fg = uclightblue}
+\setbeamercolor{subsubitem}{fg = uclightblue}
+% captions and tables
+\setbeamercolor{caption}{fg = black}
+\setbeamercolor{caption name}{fg = darkgray}
+\setbeamercolor{background canvas}{bg = uclightblue!10!white}
+% headers and footers
+\setbeamercolor{author in head/foot}{fg = darkblue, bg = white}
+\setbeamercolor{title in head/foot}{fg = white, bg = uclightblue}
+\setbeamercolor{date in head/foot}{fg = white, bg = uclightblue}
+\setbeamercolor{section in head/foot}{fg = white, bg = ucblue}
+\setbeamercolor{subsection in head/foot}{fg = white, bg = ucblue}
+\setbeamercolor{text in head/foot}{fg = ucblue}
+
+% ***** Other Elements *****
+% alert color
+\setbeamercolor{alerted text}{fg = alert}
+
+% blocks
+\setbeamercolor{block title}{fg = white, bg = block}
+\setbeamercolor{block body}{fg = black, bg = block!10!white}
+
+\setbeamercolor{block title example}{fg = white, bg = example}
+\setbeamercolor{block body example}{fg = black, bg = example!10!white}
+
+\setbeamercolor{block title alerted}{fg = white, bg = alert}
+\setbeamercolor{block body alerted}{fg = black, bg = alert!10!white}
+
+\mode<all>

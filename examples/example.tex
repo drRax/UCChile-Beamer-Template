@@ -1,0 +1,212 @@
+% beamer presentation template - rax 09.2025
+% main data
+\def \ver {1.0}			% version number
+\def \showver {1}		% 1 = show version/build; 0 = not show
+\def \maintitle {Using the Force 101}
+\def \sbtitle {a practical approach}
+\def \shorttitle {using the force}
+\def \lauthors {O.W. Kenobi, L. Skywalker, D. Vader}
+\def \sauthors {Skywalker et al.}
+\def \presenter {L. Skywalker}
+\def \grant {DeathStar 66}
+\def \coauthors {}
+\def \home {Institute of Mathematical Engineering and Computation\\PUC Chile}
+\def \venue {Galactic Senate Presentation}
+\def \location {Coruscant}
+\def \ldate {\today}
+
+% ****************************************************************************
+% Document Start
+\documentclass[xcolor=svgnames]{beamer}
+
+% **** packages ****
+\usepackage[english]{babel}
+\usepackage{rax_beamerpack}
+\usepackage{clrscode3e}
+\usepackage{fontawesome5}
+\usepackage{tkz-berge,tkz-graph}
+\usepackage[absolute,overlay]{textpos}
+
+%\usepackage{beamerthemeshadow}
+\usetheme{UC}
+
+% ****************************************************************************
+% Document Data
+\title[\shorttitle]{\maintitle}
+\subtitle{\sbtitle}
+\author[\sauthors]{\lauthors\\ \scriptsize{\em \home}}
+\institute{\venue\\ \tiny{\location}}
+\date[\sdate]{\scriptsize{\ldate}}
+
+% ****************************************************************************
+% **** pieces and bits ****
+
+% theorems and others
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+%\newtheorem{corollary}{Corollary}[section]
+\newtheorem{assumption}{Assumption}[section]
+
+% numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+% define section pages
+\setbeamertemplate{section page}
+{
+	\begin{centering}
+		\begin{beamercolorbox}[sep=12pt,center]{part title}
+			\usebeamerfont{section title}\insertsection\par
+		\end{beamercolorbox}
+	\end{centering}
+}
+
+% ****************************************************************************
+% ****************************************************************************
+\begin{document}
+
+%****************** Title Slide ******************
+\usebackgroundtemplate{}
+\begin{frame}[plain]
+	% make title page
+	\titlepage
+	
+	% add contact block
+	\begin{textblock*}{.5\linewidth}[1,1](153mm,90.5mm)
+		{\tiny
+			\email{email@email.com}
+			\vskip5pt
+			\webpage{www.raxlab.science}
+			\vskip5pt
+			\twitter{handle}
+			
+			\instagram{instagram}
+		}
+	\end{textblock*}
+	
+	% add venue logo
+%	\begin{textblock*}{.18\linewidth}[1,1](26mm,83mm)
+%		\includegraphics[width=\textwidth]{media/venue_logo}
+%	\end{textblock*}
+	
+	% add version
+	\addbuild
+	
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+%****************** Outline Slide ******************
+\usebackgroundtemplate{\pgfuseimage{bkglogo}}
+\begin{frame}[plain]{Outline}
+	\tableofcontents
+\end{frame}
+\usebackgroundtemplate{}
+
+% ********************************************************************
+% ****************** Document ******************
+% ********************************************************************
+\section{Section 1}
+\begin{frame}{Frame 1.1 - Theorems and Proofs}
+	\framesubtitle{Subtitle for 1.1}
+	\begin{theorem}
+		Theorem
+	\end{theorem}
+	\begin{proof}
+		Proof
+	\end{proof}
+\end{frame}
+
+\begin{frame}{Frame 1.2 - Blocks}
+	\begin{block}{Normal Block}
+		text
+	\end{block}
+	
+	\begin{exampleblock}{Example Block}
+		text
+	\end{exampleblock}
+	
+	\begin{alertblock}{Alert Block}
+		text
+	\end{alertblock}
+\end{frame}
+
+% *********************************************
+\section{Section 2}
+\begin{frame}{Frame 2.1 - Items}
+	\begin{itemize}
+		\item item 1
+		\item item 2
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Frame 2.2 - Enumeration}
+	\begin{enumerate}
+		\item enum 1
+		\item enum 2
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Frame 2.3}
+	content...
+\end{frame}
+
+\begin{frame}{Frame 2.4}
+	\begin{figure}[h]
+		\centering
+		\caption{caption}
+		\includegraphics[width=.3\linewidth]{logo_uc}
+	\end{figure}
+\end{frame}
+
+% *********************************************
+\section{Section 3}
+\frame{\frametitle{Frame 3.1.1}}
+\frame{\frametitle{Frame 3.1.2}}
+\frame{\frametitle{Frame 3.1.3}}
+
+%****************** Title Slide to Close ******************
+% capture slide number to correct total number of slides later
+\lastrealframe
+
+\section{}
+% clean background image if any
+%\usebackgroundtemplate{\pgfuseimage{bkglogo}}
+\usebackgroundtemplate{}
+\begin{frame}[plain]
+	% make title page
+	\titlepage
+	
+	% add contact block
+	\begin{textblock*}{.5\linewidth}[1,1](153mm,90.5mm)
+		{\tiny
+			\email{email@email.com}
+			\vskip5pt
+			\webpage{www.raxlab.science}
+			\vskip5pt
+			\twitter{handle}
+			
+			\instagram{instagram}
+		}
+	\end{textblock*}
+	
+	% add venue logo
+	%	\begin{textblock*}{.18\linewidth}[1,1](26mm,83mm)
+		%		\includegraphics[width=\textwidth]{media/venue_logo}
+		%	\end{textblock*}
+	
+	% add version
+	\addbuild
+	
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+%************************************
+\section{References}
+\begin{frame}[t,allowframebreaks]{References}
+	\bibliographystyle{alpha}
+	\tiny
+	\bibliography{references}
+\end{frame}
+
+\end{document}
